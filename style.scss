@@ -1,0 +1,35 @@
+.sidebar {
+  position: fixed;
+  //position: relative;
+  z-index: 1300;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+
+  .sidebar--background {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  & > .sidebar--child {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 270px;
+    height: 100%;
+    box-shadow: 0 6px 24px 0 rgba(141, 141, 214, 0.22);
+    background-color: #ffffff;
+    transition: 600ms;
+    @media (min-width: 320px) and (max-width: 767px) {
+      width: 30ch;
+    }
+
+  }
+}
